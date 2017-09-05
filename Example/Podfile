@@ -1,0 +1,3 @@
+target 'Segment-Swrve-Example' do
+  pod 'Segment-Swrve', :path => '../'
+end
