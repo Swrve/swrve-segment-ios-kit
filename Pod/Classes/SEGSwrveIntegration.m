@@ -1,5 +1,6 @@
 #import "SEGSwrveIntegration.h"
-#import "swrve.h"
+#import <Analytics/SEGAnalyticsUtils.h>
+#import <SwrveSDK/Swrve.h>
 
 @implementation SEGSwrveIntegration
 
@@ -14,21 +15,26 @@
 - (void)identify:(SEGIdentifyPayload *)payload
 {
     if (payload.userId != nil && [payload.userId length] != 0) {
-        [[Swrve sharedInstance] userUpdate:@{@"customer.id": payload.userId}];
+        NSDictionary* userProperties = @{@"customer.id": payload.userId};
+        [[Swrve sharedInstance] userUpdate:userProperties];
+        SEGLog(@"[[Swrve sharedInstance] userUpdate:%@]", userProperties);
     }
 
     [[Swrve sharedInstance] userUpdate:payload.traits];
+    SEGLog(@"[[Swrve sharedInstance] userUpdate:%@]", payload.traits);
 }
 
 - (void)track:(SEGTrackPayload *)payload
 {
     [[Swrve sharedInstance] event:payload.event payload:payload.properties];
+    SEGLog(@"[[Swrve sharedInstance] event:%@ payload:%@]", payload.event, payload.properties);
 }
 
 - (void)screen:(SEGScreenPayload *)payload
 {
     NSString *eventName = [[NSString alloc] initWithFormat:@"screen.%@", payload.name];
     [[Swrve sharedInstance] event:eventName payload:payload.properties];
+    SEGLog(@"[[Swrve sharedInstance] event:%@ payload:%@]", eventName, payload.properties);
 }
 
 // alias, reset, group not implemented
@@ -52,6 +58,7 @@
 - (void)flush
 {
     [[Swrve sharedInstance] sendQueuedEvents];
+    SEGLog(@"[[Swrve sharedInstance] sendQueuedEvents]");
 }
 
 @end
