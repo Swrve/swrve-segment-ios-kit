@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		194832ED5A2B570C061DAD8E /* libPods-Segment-Swrve-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB7EE4F99986D4B8EE04457 /* libPods-Segment-Swrve-Example.a */; };
+		5A0B1307E00C36B946F1432E /* libPods-Segment-Swrve-ExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E77194EC43D5192AE680109B /* libPods-Segment-Swrve-ExampleTests.a */; };
+		9F5140F21F74446F003FC37B /* Segment_Swrve_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5140F11F74446F003FC37B /* Segment_Swrve_ExampleTests.m */; };
 		9FFB01271F215A4B0030E1D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB01261F215A4B0030E1D2 /* main.m */; };
 		9FFB012A1F215A4B0030E1D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB01291F215A4B0030E1D2 /* AppDelegate.m */; };
 		9FFB012D1F215A4B0030E1D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB012C1F215A4B0030E1D2 /* ViewController.m */; };
@@ -16,9 +18,24 @@
 		9FFB01351F215A4B0030E1D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFB01331F215A4B0030E1D2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9F5140F41F74446F003FC37B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FFB011A1F215A4B0030E1D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FFB01211F215A4B0030E1D2;
+			remoteInfo = "Segment-Swrve-Example";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		079D19C553D8534738F9FEC1 /* Pods-Segment-Swrve-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Swrve-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Swrve-Example/Pods-Segment-Swrve-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4279FDC2AD0186AC39F1B8A9 /* Pods-Segment-Swrve-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Swrve-ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Swrve-ExampleTests/Pods-Segment-Swrve-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		522875026635C5E15891F249 /* Pods-Segment-Swrve-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Swrve-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Swrve-ExampleTests/Pods-Segment-Swrve-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F0244F91F39257D006B38C6 /* Segment-Swrve-Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Segment-Swrve-Example.entitlements"; sourceTree = "<group>"; };
+		9F5140EF1F74446F003FC37B /* Segment-Swrve-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Segment-Swrve-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F5140F11F74446F003FC37B /* Segment_Swrve_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Segment_Swrve_ExampleTests.m; sourceTree = "<group>"; };
+		9F5140F31F74446F003FC37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FFB01221F215A4B0030E1D2 /* Segment-Swrve-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Segment-Swrve-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFB01261F215A4B0030E1D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9FFB01281F215A4B0030E1D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,10 +47,19 @@
 		9FFB01341F215A4B0030E1D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FFB01361F215A4B0030E1D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B83EE7D73A6CABE424E96B96 /* Pods-Segment-Swrve-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Swrve-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Swrve-Example/Pods-Segment-Swrve-Example.release.xcconfig"; sourceTree = "<group>"; };
+		E77194EC43D5192AE680109B /* libPods-Segment-Swrve-ExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Segment-Swrve-ExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB7EE4F99986D4B8EE04457 /* libPods-Segment-Swrve-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Segment-Swrve-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9F5140EC1F74446F003FC37B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0B1307E00C36B946F1432E /* libPods-Segment-Swrve-ExampleTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FFB011F1F215A4B0030E1D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				EFB7EE4F99986D4B8EE04457 /* libPods-Segment-Swrve-Example.a */,
+				E77194EC43D5192AE680109B /* libPods-Segment-Swrve-ExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -58,14 +85,26 @@
 			children = (
 				079D19C553D8534738F9FEC1 /* Pods-Segment-Swrve-Example.debug.xcconfig */,
 				B83EE7D73A6CABE424E96B96 /* Pods-Segment-Swrve-Example.release.xcconfig */,
+				4279FDC2AD0186AC39F1B8A9 /* Pods-Segment-Swrve-ExampleTests.debug.xcconfig */,
+				522875026635C5E15891F249 /* Pods-Segment-Swrve-ExampleTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F5140F01F74446F003FC37B /* Segment-Swrve-ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F5140F11F74446F003FC37B /* Segment_Swrve_ExampleTests.m */,
+				9F5140F31F74446F003FC37B /* Info.plist */,
+			);
+			path = "Segment-Swrve-ExampleTests";
 			sourceTree = "<group>";
 		};
 		9FFB01191F215A4B0030E1D2 = {
 			isa = PBXGroup;
 			children = (
 				9FFB01241F215A4B0030E1D2 /* Segment-Swrve-Example */,
+				9F5140F01F74446F003FC37B /* Segment-Swrve-ExampleTests */,
 				9FFB01231F215A4B0030E1D2 /* Products */,
 				9E72BE8FF5E1214B70B47CAC /* Pods */,
 				291D53A15B0685D989ECF97C /* Frameworks */,
@@ -76,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				9FFB01221F215A4B0030E1D2 /* Segment-Swrve-Example.app */,
+				9F5140EF1F74446F003FC37B /* Segment-Swrve-ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +148,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9F5140EE1F74446F003FC37B /* Segment-Swrve-ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F5140F81F74446F003FC37B /* Build configuration list for PBXNativeTarget "Segment-Swrve-ExampleTests" */;
+			buildPhases = (
+				02ED010F3F82171A071592BB /* [CP] Check Pods Manifest.lock */,
+				9F5140EB1F74446F003FC37B /* Sources */,
+				9F5140EC1F74446F003FC37B /* Frameworks */,
+				9F5140ED1F74446F003FC37B /* Resources */,
+				583F141F3E8F199ED4FC8921 /* [CP] Embed Pods Frameworks */,
+				4E5EDEC249DBB419E32C5421 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F5140F51F74446F003FC37B /* PBXTargetDependency */,
+			);
+			name = "Segment-Swrve-ExampleTests";
+			productName = "Segment-Swrve-ExampleTests";
+			productReference = 9F5140EF1F74446F003FC37B /* Segment-Swrve-ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9FFB01211F215A4B0030E1D2 /* Segment-Swrve-Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FFB01391F215A4B0030E1D2 /* Build configuration list for PBXNativeTarget "Segment-Swrve-Example" */;
@@ -137,6 +198,12 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Swrve;
 				TargetAttributes = {
+					9F5140EE1F74446F003FC37B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 58R25A85DY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9FFB01211F215A4B0030E1D2;
+					};
 					9FFB01211F215A4B0030E1D2 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
@@ -162,11 +229,19 @@
 			projectRoot = "";
 			targets = (
 				9FFB01211F215A4B0030E1D2 /* Segment-Swrve-Example */,
+				9F5140EE1F74446F003FC37B /* Segment-Swrve-ExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9F5140ED1F74446F003FC37B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FFB01201F215A4B0030E1D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,6 +255,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02ED010F3F82171A071592BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E5EDEC249DBB419E32C5421 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Segment-Swrve-ExampleTests/Pods-Segment-Swrve-ExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		583F141F3E8F199ED4FC8921 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Segment-Swrve-ExampleTests/Pods-Segment-Swrve-ExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		660239F3EEA994D26F9C791B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +348,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9F5140EB1F74446F003FC37B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F5140F21F74446F003FC37B /* Segment_Swrve_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FFB011E1F215A4B0030E1D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +367,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F5140F51F74446F003FC37B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FFB01211F215A4B0030E1D2 /* Segment-Swrve-Example */;
+			targetProxy = 9F5140F41F74446F003FC37B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9FFB012E1F215A4B0030E1D2 /* Main.storyboard */ = {
@@ -260,6 +396,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9F5140F61F74446F003FC37B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4279FDC2AD0186AC39F1B8A9 /* Pods-Segment-Swrve-ExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 58R25A85DY;
+				INFOPLIST_FILE = "Segment-Swrve-ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swrve.Segment-Swrve-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Segment-Swrve-Example.app/Segment-Swrve-Example";
+			};
+			name = Debug;
+		};
+		9F5140F71F74446F003FC37B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 522875026635C5E15891F249 /* Pods-Segment-Swrve-ExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 58R25A85DY;
+				INFOPLIST_FILE = "Segment-Swrve-ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swrve.Segment-Swrve-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Segment-Swrve-Example.app/Segment-Swrve-Example";
+			};
+			name = Release;
+		};
 		9FFB01371F215A4B0030E1D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -379,6 +543,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9F5140F81F74446F003FC37B /* Build configuration list for PBXNativeTarget "Segment-Swrve-ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F5140F61F74446F003FC37B /* Debug */,
+				9F5140F71F74446F003FC37B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9FFB011D1F215A4B0030E1D2 /* Build configuration list for PBXProject "Segment-Swrve-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

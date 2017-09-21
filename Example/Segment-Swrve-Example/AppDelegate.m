@@ -12,6 +12,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // If we are running unittests, let's quit here.
+    BOOL runningTests = NSClassFromString(@"XCTestCase") != nil;
+    if(runningTests) {
+        return YES;
+    }
+
     SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurationWithWriteKey:@"YOUR_WRITE_KEY"];
 
     // FIXME Add your own App ID and Api Key here

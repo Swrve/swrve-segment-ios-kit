@@ -1,3 +1,11 @@
 target 'Segment-Swrve-Example' do
   pod 'Segment-Swrve', :path => '../'
+
+  target 'Segment-Swrve-ExampleTests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+    pod 'OCMockito'
+    pod 'Expecta'
+  end
 end
