@@ -5,7 +5,7 @@
 To install the Segment-Swrve integration, simply add this line to your `Podfile`:
 
 ```
-pod 'SwrveSegment'
+pod 'Segment-Swrve'
 ```
 
 ## Usage
