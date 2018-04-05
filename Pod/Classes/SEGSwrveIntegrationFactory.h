@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <Analytics/SEGIntegrationFactory.h>
-#import <SwrveSDK/Swrve.h>
+#import "SwrveSDK.h"
 
 @interface SEGSwrveIntegrationFactory : NSObject<SEGIntegrationFactory>
 
