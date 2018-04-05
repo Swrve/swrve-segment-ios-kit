@@ -16,7 +16,7 @@
 {
     if (payload.userId != nil && [payload.userId length] != 0) {
         NSDictionary* userProperties = @{@"customer.id": payload.userId};
-        [SwrveSDK userUpdate userUpdate:userProperties];
+        [SwrveSDK userUpdate:userProperties];
         SEGLog(@"[SwrveSDK userUpdate:%@]", userProperties);
     }
 
