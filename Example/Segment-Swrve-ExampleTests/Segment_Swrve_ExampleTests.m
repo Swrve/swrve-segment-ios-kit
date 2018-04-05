@@ -19,7 +19,7 @@ describe(@"Swrve Integration", ^{
         mockSwrve = mock([Swrve class]);
 
         stubSingleton(mockSwrveClass, sharedInstance);
-        [given([Swrve sharedInstance]) willReturn:mockSwrve];
+        [given([SwrveSDK]) willReturn:mockSwrve];
 
         integration = [[SEGSwrveIntegration alloc] initWithSettings:@{}];
     });
