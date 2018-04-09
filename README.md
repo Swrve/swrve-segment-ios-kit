@@ -13,7 +13,7 @@ pod 'Segment-Swrve'
 After adding the dependency, you must register the integration.  To do this, import the Swrve integration in your `AppDelegate`:
 
 ```
-#import <SwrveSegment/SEGSwrveIntegrationFactory.h>
+#import <Segment-Swrve/SEGSwrveIntegrationFactory.h>
 ```
 
 And add the following lines:

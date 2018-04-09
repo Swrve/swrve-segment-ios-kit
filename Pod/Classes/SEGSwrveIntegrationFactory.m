@@ -12,7 +12,7 @@ static SEGSwrveIntegrationFactory *sSharedInstance;
 
     dispatch_once(&onceToken, ^{
         if (!sSharedInstance) {
-            [Swrve sharedInstanceWithAppID:appId
+            [SwrveSDK sharedInstanceWithAppID:appId
                                     apiKey:apiKey
                                     config:swrveConfig
                              launchOptions:launchOptions];
