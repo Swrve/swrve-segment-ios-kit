@@ -4,6 +4,7 @@
 #import <Expecta/Expecta.h>
 #import <OCMockito/OCMockito.h>
 
+#import <SwrveSDK/SwrveSDK.h>
 #import <SwrveSDK/Swrve.h>
 #import <Segment-Swrve/SEGSwrveIntegration.h>
 
@@ -15,11 +16,11 @@ describe(@"Swrve Integration", ^{
     __block SEGSwrveIntegration *integration;
 
     beforeEach(^{
-        mockSwrveClass = mockClass([Swrve class]);
+        mockSwrveClass = mockClass([SwrveSDK class]);
         mockSwrve = mock([Swrve class]);
 
         stubSingleton(mockSwrveClass, sharedInstance);
-        [given([SwrveSDK]) willReturn:mockSwrve];
+        [given([SwrveSDK sharedInstance]) willReturn:mockSwrve];
 
         integration = [[SEGSwrveIntegration alloc] initWithSettings:@{}];
     });
