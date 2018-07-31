@@ -26,7 +26,21 @@
 
 - (void)track:(SEGTrackPayload *)payload
 {
-    [SwrveSDK event:payload.event payload:payload.properties];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init] ;
+    for (NSString *key in payload.properties.allKeys) {
+        id object = [payload.properties objectForKey:key];
+        if (![object isKindOfClass:[NSDictionary class]]) {
+            [dict setObject:object
+                     forKey:key];
+        } else if ([object isKindOfClass:[NSDictionary class]]){
+            for (NSString *subkey in [object allKeys]){
+                id subobject = [object objectForKey:subkey];
+                [dict setObject:subobject forKey:[NSString stringWithFormat:@"%@.%@",key,subkey]];
+            }
+        }
+    }
+    NSDictionary *props = [NSDictionary dictionaryWithDictionary: dict];
+    [SwrveSDK event:payload.event payload:props];
     SEGLog(@"[SwrveSDK event:%@ payload:%@]", payload.event, payload.properties);
 }
 
