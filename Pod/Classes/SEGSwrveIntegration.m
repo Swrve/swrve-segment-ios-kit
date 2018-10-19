@@ -24,22 +24,22 @@
     SEGLog(@"[SwrveSDK userUpdate:%@]", payload.traits);
 }
 
-- (void)track:(SEGTrackPayload *)payload
-{
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init] ;
-    for (NSString *key in payload.properties.allKeys) {
-        id object = [payload.properties objectForKey:key];
+- (NSDictionary *)flatten: (NSDictionary *) payload{
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    for (NSString *key in payload.allKeys) {
+        id object = [payload objectForKey:key];
         if (![object isKindOfClass:[NSDictionary class]]) {
-            [dict setObject:object
-                     forKey:key];
-        } else if ([object isKindOfClass:[NSDictionary class]]){
-            for (NSString *subkey in [object allKeys]){
-                id subobject = [object objectForKey:subkey];
-                [dict setObject:subobject forKey:[NSString stringWithFormat:@"%@.%@",key,subkey]];
-            }
+            [dict setObject:object forKey:key];
+        } else if ([object isKindOfClass:[NSDictionary class]]) {
+            [dict addEntriesFromDictionary:[self flatten:object]];
         }
     }
-    NSDictionary *props = [NSDictionary dictionaryWithDictionary: dict];
+    return [NSDictionary dictionaryWithDictionary:dict];
+}
+
+- (void)track:(SEGTrackPayload *)payload
+{
+    NSDictionary *props = [self flatten:payload.properties];
     [SwrveSDK event:payload.event payload:props];
     SEGLog(@"[SwrveSDK event:%@ payload:%@]", payload.event, payload.properties);
 }
