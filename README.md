@@ -34,8 +34,7 @@ SwrveConfig *swrveConfig = [[SwrveConfig alloc] init];
 
 [config use:[SEGSwrveIntegrationFactory instanceWithAppId:appId
                                                    apiKey:apiKey
-                                              swrveConfig:swrveConfig
-                                            launchOptions:launchOptions]];
+                                              swrveConfig:swrveConfig]];
 
 [SEGAnalytics setupWithConfiguration:config];
 ```
