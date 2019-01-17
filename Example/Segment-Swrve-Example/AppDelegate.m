@@ -18,7 +18,7 @@
         return YES;
     }
 
-    SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurationWithWriteKey:@"YOU_WRITE_KEY"];
+    SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurationWithWriteKey:@"YOUR_WRITE_KEY"];
 
     // FIXME Add your own App ID and Api Key here
     int appId = 0;
