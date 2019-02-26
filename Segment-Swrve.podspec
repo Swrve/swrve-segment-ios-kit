@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Segment-Swrve"
-  s.version          = "3.0"
+  s.version          = "3.0.0"
   s.summary          = "Swrve SDK integration for the Segment iOS"
   s.description      = "Swrve is an integrated mobile marketing automation platform supporting every aspect of mobile engagement, retention and monetization, including in-app messages, push notifications, email, mobile A/B testing, and mobile analytics"
   s.homepage         = 'https://www.swrve.com/'
