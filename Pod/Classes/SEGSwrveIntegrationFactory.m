@@ -6,7 +6,7 @@
 static SEGSwrveIntegrationFactory *sSharedInstance;
 
 // Swrve needs to be initialized early in order to work correctly.
-+ (SEGSwrveIntegrationFactory *)instanceWithAppId:(int)appId apiKey:(NSString *)apiKey swrveConfig:(SwrveConfig *)swrveConfig launchOptions:(NSDictionary *)launchOptions
++ (SEGSwrveIntegrationFactory *)instanceWithAppId:(int)appId apiKey:(NSString *)apiKey swrveConfig:(SwrveConfig *)swrveConfig
 {
     static dispatch_once_t onceToken;
 
@@ -14,8 +14,7 @@ static SEGSwrveIntegrationFactory *sSharedInstance;
         if (!sSharedInstance) {
             [SwrveSDK sharedInstanceWithAppID:appId
                                     apiKey:apiKey
-                                    config:swrveConfig
-                             launchOptions:launchOptions];
+                                    config:swrveConfig];
             sSharedInstance = [[self alloc] init];
         }
     });

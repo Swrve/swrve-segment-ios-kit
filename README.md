@@ -34,10 +34,18 @@ SwrveConfig *swrveConfig = [[SwrveConfig alloc] init];
 
 [config use:[SEGSwrveIntegrationFactory instanceWithAppId:appId
                                                    apiKey:apiKey
-                                              swrveConfig:swrveConfig
-                                            launchOptions:launchOptions]];
+                                              swrveConfig:swrveConfig]];
 
 [SEGAnalytics setupWithConfiguration:config];
+```
+
+## Identity
+
+In order to use Swrve's [identity functionality](https://docs.swrve.com/developer-documentation/integration/ios/#User_identity), you must use Segment's `identify` method with the key `swrve_external_id` in the traits dictionary. This is deliberately separate from the Segment user id, since Swrve does not allow the use of email or other PII as an external identifier.
+
+Identifying in Swrve:
+```
+[[SEGAnalytics sharedAnalytics] identify:@"SEGMENT_USER_ID" traits:@{ @"swrve_external_id": @"EXTERNAL_USER_ID"}];
 ```
 
 ## License

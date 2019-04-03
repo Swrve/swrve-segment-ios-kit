@@ -4,6 +4,6 @@
 
 @interface SEGSwrveIntegrationFactory : NSObject<SEGIntegrationFactory>
 
-+ (instancetype)instanceWithAppId:(int)appId apiKey:(NSString *)apiKey swrveConfig:(SwrveConfig *)swrveConfig launchOptions:(NSDictionary *)launchOptions;
++ (instancetype)instanceWithAppId:(int)appId apiKey:(NSString *)apiKey swrveConfig:(SwrveConfig *)swrveConfig;
 
 @end

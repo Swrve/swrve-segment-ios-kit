@@ -32,8 +32,7 @@
 
     [configuration use:[SEGSwrveIntegrationFactory instanceWithAppId:appId
                                                               apiKey:apiKey
-                                                         swrveConfig:swrveConfig
-                                                       launchOptions:launchOptions]];
+                                                         swrveConfig:swrveConfig]];
 
     // Enable this to record certain application events automatically!
     configuration.trackApplicationLifecycleEvents = YES;

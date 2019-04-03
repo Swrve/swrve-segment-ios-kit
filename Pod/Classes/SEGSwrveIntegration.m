@@ -14,14 +14,26 @@
 
 - (void)identify:(SEGIdentifyPayload *)payload
 {
+    NSMutableDictionary *traitsCopy = [payload.traits mutableCopy];
+    if ([[payload.traits allKeys] containsObject:@"swrve_external_id"]) {
+        NSString *external_id = [payload.traits objectForKey:@"swrve_external_id"];
+        [SwrveSDK identify:external_id onSuccess:^(NSString* status, NSString *swrveUserId) {
+            SEGLog(@"Successfully identified swrve_user_id %@ with external_id %@", swrveUserId, external_id);
+        } onError:^(NSInteger httpCode, NSString *errorMessage) {
+            SEGLog(@"Swrve identification failed with error code %@: %@", httpCode, errorMessage);
+        }];
+        [traitsCopy removeObjectForKey:@"swrve_external_id"];
+    }
+    
     if (payload.userId != nil && [payload.userId length] != 0) {
         NSDictionary* userProperties = @{@"customer.id": payload.userId};
         [SwrveSDK userUpdate:userProperties];
         SEGLog(@"[SwrveSDK userUpdate:%@]", userProperties);
     }
 
-    [SwrveSDK userUpdate:payload.traits];
-    SEGLog(@"[SwrveSDK userUpdate:%@]", payload.traits);
+    NSDictionary* properties = [traitsCopy copy];
+    [SwrveSDK userUpdate:properties];
+    SEGLog(@"[SwrveSDK userUpdate:%@]", properties);
 }
 
 - (NSDictionary *)flatten: (NSDictionary *) payload{
